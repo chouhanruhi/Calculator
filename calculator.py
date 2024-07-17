@@ -1,8 +1,13 @@
+import history as H
+
 riya = True
-print("1-Addition \n2-Substraction\n3-Division\n4-Multiplication\n5-power to\n6-Rounding\noo-Exit")
+print("1-Addition \n2-Substraction\n3-Division\n4-Multiplication\n5-power to\n6-Rounding\n7-Remaining\n8-Show History\noo-Exit")
 
 while riya is True:
-    First = int(input("Enter the first digit"))
+    oppe = H.opp()
+    if oppe == 0:
+        exit()
+    First = int(input("Enter the First Digit:"))
     if First == 00:
         print("Closing the app")
         exit()
@@ -10,31 +15,41 @@ while riya is True:
     if Sec == 00:
         print("Closing the app")
         exit()
-    opp = int(input("Enter the Operator:"))
-    if opp == 1:
+    if oppe == 1:
         Sum = First + Sec
-        print(sum)
-    elif opp == 2:
+        Total = f"{First}+{Sec}={Sum}"
+        H.add_file(Total)
+        print(Sum)
+    elif oppe == 2:
         Sum = First - Sec
-        print(sum)
-    elif opp == 3:
+        Total = f"{First}-{Sec}={Sum}"
+        H.add_file(Total)
+        print(Sum)
+    elif oppe == 3:
         Sum = First / Sec
-        print(sum)
-    elif opp == 4:
+        Total = f"{First}/{Sec}={Sum}"
+        H.add_file(Total)
+        print(Sum)
+    elif oppe == 4:
         Sum = First * Sec
-        print(sum)
-    elif opp == 5:
+        Total = f"{First}/{Sec}={Sum}"
+        H.add_file(Total)
+        print(Sum)
+    elif oppe == 5:
         Sum = First ** Sec
-        print(sum)
-    elif opp == 6:
+        Total = f"{First}^{Sec}={Sum}"
+        H.add_file(Total)
+        print(Sum)
+    elif oppe == 6:
         Sum = First // Sec
-        print(sum)
-    elif opp == 7:
+        Total = f"{First}//{Sec}={Sum}"
+        H.add_file(Total)
+        print(Sum)
+    elif oppe == 7:
         Sum = First % Sec
-        print(sum)
-    elif opp == 00:
-        riya  = False
-        print("Closing the app")
+        Total = f"{First}%{Sec}={Sum}"
+        H.add_file(Total)
+        print(Sum)
     else:
         print("Wrong input")
 
